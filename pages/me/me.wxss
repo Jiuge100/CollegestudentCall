@@ -1,0 +1,43 @@
+/* pages/me/me.wxss */
+.daren{
+  background: #0099CC;
+  border-radius:15rpx;
+}
+.number {
+  font-size: 40rpx;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.font {
+  font-size: 32rpx;
+  height: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+
+
+
+
+
+.nav {
+  width: 100%;
+  float: left;
+  box-sizing: border-box;
+  background: #ededed;
+}
+.nav_items {
+  float: left;
+  width: 48%;
+  margin: 1.5% 1%;
+  background: #fff;
+  border-radius: 15rpx;
+  position: relative;
+  /* box-shadow: 5px 5px 20px -6px #00000049; */
+}

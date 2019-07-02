@@ -1,0 +1,104 @@
+<!--pages/home/home.wxml-->
+<view style='width: 750rpx;display: flex;align-items:center;justify-content: center;width: 100%;height: 160rpx;background: #1296db;'>
+    <view style='align-items:center;display: flex;width: 80%;height:42%;background:whitesmoke;border-radius:10rpx;'bindtap='search'>
+        <image style=' width: 43rpx;height: 43rpx;margin-left:20rpx;' src='../../image/search.png'></image>
+        <view style='margin-left:20rpx;font-size: 32rpx;'>请输入...</view>
+    </view>
+</view>
+
+
+<view style='display: flex;align-items:center;width: 100%;height:62rpx;background:#0066CC;font-size:30rpx;color:#fff'>
+  <view style='margin-left:30rpx;'>热搜:</view>
+  <view class='border'>赣南脐橙</view>
+  <view class='border'>四级真题</view>
+  <view class='border'>蚊帐</view>
+  <view class='border'>被子</view>
+</view>
+
+<view style='width:100%;display: flex;justify-content: center;'>
+  <swiper class='swiper' autoplay='ture' indicator-dots indicator-active-color='#707070' circular='ture'>
+      <block wx:for="{{image}}" wx:key="">
+        <swiper-item>
+          <image src='{{item}}' class='img'  mode='aspectFill'/>
+        </swiper-item>
+      </block>
+  </swiper>
+</view>
+
+
+<view style='width:100%;height:20rpx;'></view>
+
+<view style='display: flex;justify-content: space-around;width: 100%;height:160rpx;'>
+  <view style='background: #fff;'>
+    <view class='kuai'>
+      <view  style='width: 100rpx;height: 100rpx;background: red;'></view>
+    </view>
+    <view class='kuaizi'>今日新品</view>
+  </view>
+  <view style='background: #fff;'>
+    <view class='kuai'>
+      <view  style='width: 100rpx;height: 100rpx;background: red;'></view>
+    </view>
+    <view class='kuaizi'>人气折扣</view>
+  </view>
+  <view style='background: #fff;'>
+    <view class='kuai'>
+      <view  style='width: 100rpx;height: 100rpx;background: red;'></view>
+    </view>
+    <view class='kuaizi'>口碑好物</view>
+  </view>
+  <view style='background: #fff;'>
+    <view class='kuai'>
+      <view  style='width: 100rpx;height: 100rpx;background: red;'></view>
+    </view>
+    <view class='kuaizi'>二手市场</view>
+  </view>
+</view>
+
+<view style='display: flex;justify-content: space-around;width: 100%;height:160rpx;'>
+  <view style='background: #fff;' bindtap='shuiguo' data-cate="3">
+    <view class='kuai'>
+      <view  style='width: 100rpx;height: 100rpx;background: red;'></view>
+    </view>
+    <view class='kuaizi'>水果零食</view>
+  </view>
+  <view style='background: #fff;'>
+    <view class='kuai'>
+      <view  style='width: 100rpx;height: 100rpx;background: red;'></view>
+    </view>
+    <view class='kuaizi'>生活用品</view>
+  </view>
+  <view style='background: #fff;'>
+    <view class='kuai'>
+      <view  style='width: 100rpx;height: 100rpx;background: red;'></view>
+    </view>
+    <view class='kuaizi'>学习考证</view>
+  </view>
+  <view style='background: #fff;'>
+    <view class='kuai'>
+      <view  style='width: 100rpx;height: 100rpx;background: red;'></view>
+    </view>
+    <view class='kuaizi'>其他</view>
+  </view>
+</view>
+
+<view style='width:100%;height:20rpx;'></view>
+
+<view style='display: flex;justify-content: center;width:100%;height:300rpx;'>
+  <view style='width:90%;height:100%;background:blue;border-radius:10rpx;'></view>
+</view>
+
+<view style='display: flex;justify-content: center;width:100%;height:300rpx;'>
+  <view style='width:90%;height:100%;background:blue;border-radius:10rpx;'></view>
+</view>
+
+<view style='display: flex;justify-content: center;width:100%;height:300rpx;'>
+  <view style='width:90%;height:100%;background:blue;border-radius:10rpx;'></view>
+</view>
+<view style='display: flex;justify-content: center;width:100%;height:300rpx;'>
+  <view style='width:90%;height:100%;background:blue;border-radius:10rpx;'></view>
+</view>
+<view style='display: flex;justify-content: center;width:100%;height:300rpx;'>
+  <view style='width:90%;height:100%;background:blue;border-radius:10rpx;'></view>
+</view>
+

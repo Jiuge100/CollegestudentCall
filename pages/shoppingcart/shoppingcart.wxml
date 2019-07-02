@@ -1,0 +1,45 @@
+<!--pages/shoppingcart/shoppingcart.wxml-->
+<!--pages/detail/detail.wxml-->
+<view wx:if="{{hasList}}">
+  <view class="list" wx:for="{{carts}}">
+    <view class="choose">
+      <icon wx:if="{{item.selected}}" type="success" color="red" data-num="{{index}}" bindtap="selected"></icon>
+      <icon wx:else  type="circle"  data-num="{{index}}" bindtap="selected"></icon>
+    </view>
+    <view class="imgages">
+      <image class="navimg" src="../../image/57d0d400Nfd249af4.jpg!q70.jpg"></image>
+    </view>
+    <view class="info">
+      <text class="title">{{item.title}}</text>
+      <text class="specify">重量：0.506kg; 规格：曜石黑,64GB</text>
+      <text class="charge">￥<text>{{item.price}}</text></text>
+      <view style='width:100%;height:30px;display: flex;justify-content: space-between;'>
+        <view class="buy-num">
+          <text class="add" bindtap="addNum" data-num="{{index}}">+</text>
+          <text class="goodsNum">{{item.num}}</text>
+          <text class="sub" bindtap="subNum" data-num="{{index}}">-</text>
+        </view>
+        <text bindtap="deleteList" data-index="{{index}}">×</text>
+      </view>
+    </view>
+  </view>
+<!--底部-->
+  <view class="footer">
+    <view class="allchoice choose">
+      <view style='display: flex;align-items:center;'>
+        <icon wx:if="{{selectAll == true}}" type="success" color="red" bindtap="selectedAll"></icon>
+        <icon wx:else  type="circle" bindtap="selectedAll"></icon>
+      </view>
+      <view style='margin-left:10rpx;'>全选</view>
+    </view>
+    <view class="gotonext">结算({{selectNum}}件)</view>
+    <view class="total">总计:
+      <text class="money">￥{{totalPrice}}</text>
+      <text class="other">不含运费,已优惠50.00</text>
+    </view>
+  </view>
+</view>
+
+<view wx:else>
+  <view >购物车是空的哦~</view>
+</view>

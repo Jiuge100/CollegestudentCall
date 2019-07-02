@@ -1,0 +1,34 @@
+<!--pages/type/type.wxml-->
+<view style='display: flex;width: 100%;height:100%;'>
+  <view  style='width:25%;height:1000rpx;'>
+    <view class="{{nav_select==index ? 'oneactive' : 'one'}}" data-nav_select1='{{index}}' wx:for="{{type}}" wx:key="id" bindtap='switch_nav'>
+    {{item}}
+    </view>
+  </view>
+  <view wx:if="{{nav_select==0}}" class='two'>
+  0种类1
+  {{id}}
+  </view>
+  <view wx:if="{{nav_select==1}}" class='two'>
+  1种类2
+  </view>
+  <view wx:if="{{nav_select==2}}" class='two'>
+  2种类3
+  </view>
+  <view wx:if="{{nav_select==3}}" class='two'>
+  3种类4
+  </view>
+  <view wx:if="{{nav_select==4}}" class='two'>
+  4种类5
+  </view>
+  <view wx:if="{{nav_select==5}}" class='two'>
+  5种类6
+  </view>
+  <view wx:if="{{nav_select==6}}" class='two'>
+  6种类7
+  </view>
+  <view wx:if="{{nav_select==7}}" class='two'>
+  7种类8
+  </view>
+  
+</view>

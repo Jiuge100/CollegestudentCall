@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/type/type",
+    "pages/find/find",
+    "pages/shoppingcart/shoppingcart",
+    "pages/me/me",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "大学生来电",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#707070",
+    "selectedColor": "#1296db",
+    "list": [
+    {
+      "pagePath": "pages/home/home",
+      "text": "首页",
+      "iconPath": "/image/home.png",
+      "selectedIconPath": "/image/home1.png"
+    },
+    {
+      "pagePath": "pages/type/type",
+      "text": "种类",
+      "iconPath": "/image/type.png",
+      "selectedIconPath": "/image/type1.png"
+    },
+    {
+      "pagePath": "pages/find/find",
+      "text": "发现",
+      "iconPath": "/image/find.png",
+      "selectedIconPath": "/image/find1.png"
+    },
+    {
+      "pagePath": "pages/shoppingcart/shoppingcart",
+      "text": "购物车",
+      "iconPath": "/image/shoppingcart.png",
+      "selectedIconPath": "/image/shoppingcart1.png"
+    },
+    {
+      "pagePath":"pages/me/me",
+      "text": "我的",
+      "iconPath": "/image/me.png",
+      "selectedIconPath": "/image/me1.png"
+    }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
