@@ -5,15 +5,35 @@ Page({
    */
   data: {
     nav_select: '0',
-    type: ['新鲜水果', '零食饮料',  '电器数码', '衣裤鞋帽', '日用百货', '化妆品', '书籍文具','其他'],
+    type: ['新鲜水果', '零食饮料', '电器数码', '衣裤鞋帽', '日用百货', '化妆品', '书籍文具', '其他', '化妆品', '书籍文具', '其他', '零食饮料', '电器数码'],
+    goods:[]
   },
 
   switch_nav:function(e){
+    var that = this
     console.log(e);
     this.setData({
       nav_select: e.currentTarget.dataset.nav_select1,
     })
-    console.log(this.data.nav_select);
+    console.log(this.data.type[this.data.nav_select]);
+    wx.request({
+      url: getApp().globalData.url + 'allgoods',
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        console.log(res)
+        that.setData({
+          goods: res.data
+        })
+        console.log(that.data.goods)
+      },
+      fail: function () {
+        console.log('失败')
+      }
+    })
+    
+
   },
 
   /**
@@ -32,6 +52,23 @@ Page({
       },
     })
     console.log(this.data.nav_select+'haha2222');
+
+    wx.request({
+      url: getApp().globalData.url + 'allgoods',
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        console.log(res)
+        that.setData({
+          goods: res.data
+        })
+        console.log(that.data.goods)
+      },
+      fail: function () {
+        console.log('失败')
+      }
+    })
   },
 
   /**

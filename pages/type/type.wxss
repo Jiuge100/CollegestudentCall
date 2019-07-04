@@ -1,6 +1,8 @@
 /* pages/type/type.wxss */
+page{
+  background: whitesmoke
+}
 .one{
-
   border-right:none;
   border-left:none;
   border-top: none;
@@ -9,14 +11,14 @@
   justify-content: center;
   align-items:center;
 }
-.oneactive{ 
-  border-left: 3px solid #1296db;
-  background:whitesmoke;
+.oneactive{
+  background: #fff;
+  border-left: 3px solid #87CEFA;
   height: 100rpx;
   display: flex;
   justify-content: center;
   align-items:center;
 } 
 .two{
-  width:75%;height:1000rpx;
+  
 }

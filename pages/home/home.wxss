@@ -8,8 +8,8 @@ page {
   width: 130rpx;
   margin-left: 20rpx;
   text-align:center;
-  background: #09c;
-  border: 4rpx solid #000;
+  background: #87CEEB;
+  border: 1rpx solid #000;
   border-radius: 15rpx;
 }
 
