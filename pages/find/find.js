@@ -5,12 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    goods: [{ id: 1, name: '苹果' },
-            { id: 1, name: '香蕉' },
-            { id: 1, name: '菠萝' },
-            { id: 1, name: '西瓜' },
-            { id: 1, name: '提子' }
-        ],
+
 
     card: [{ id: 1, title: '华为 HUAWEI P10 全网通 4GB+64G 曜石黑 移动联通电信4GB手机', num: 4, price: 4500, selected: true}],
 

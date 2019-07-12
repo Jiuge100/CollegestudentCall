@@ -1,11 +1,9 @@
 /* pages/type/type.wxss */
 page{
-  background: whitesmoke
+  background: #ededed
 }
 .one{
-  border-right:none;
-  border-left:none;
-  border-top: none;
+  border-bottom: 1px solid 	#D3D3D3;
   height: 100rpx;
   display: flex;
   justify-content: center;
@@ -19,6 +17,20 @@ page{
   justify-content: center;
   align-items:center;
 } 
-.two{
-  
+.goods-list{
+  display:flex;
+  flex-wrap:wrap;
+  margin-top:30rpx;
+}
+
+.goods{
+  float: left;
+  width:160rpx;
+  font-size:14px;
+  margin:15rpx;
+  text-align:center;
+}
+.img{
+  width:160rpx;
+  height:160rpx;
 }

@@ -1,4 +1,7 @@
 /* pages/me/me.wxss */
+page{
+  background: whitesmoke
+}
 .daren{
   background: #0099CC;
   border-radius:15rpx;
@@ -11,7 +14,6 @@
   justify-content: center;
   color: #fff;
 }
-
 .font {
   font-size: 32rpx;
   height: 40%;
@@ -20,12 +22,6 @@
   justify-content: center;
   color: #fff;
 }
-
-
-
-
-
-
 .nav {
   width: 100%;
   float: left;
@@ -40,4 +36,11 @@
   border-radius: 15rpx;
   position: relative;
   /* box-shadow: 5px 5px 20px -6px #00000049; */
+}
+.nothover{
+  height:90rpx;width:94%;background:white;border-bottom-right-radius:15px;border-bottom-left-radius:15px;
+
+}
+.hover{
+  background:#DCDCDC;
 }

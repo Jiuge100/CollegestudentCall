@@ -1,42 +1,25 @@
-// pages/home/home.js
+// pages/secondhand/secondhand.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    image: [
-      '../../imglunbo/0b929.png',
-      '../../imglunbo/39c6d.png',
-      '../../imglunbo/72afd.png'
-    ],
+    nav_select: '0',
+    type: ['衣裤鞋帽', '电器数码', '日用百货', '化妆品', '书籍文具', '体育用品', '交通出行', '其他'],
+    goods: []
   },
-  shuiguo:function(e){
-    wx.setStorage({
-      key: 'type',
-      data: e.currentTarget.dataset.cate,
+  switch_nav: function (e) {
+    var that = this
+    console.log(e);
+    this.setData({
+      nav_select: e.currentTarget.dataset.nav_select,
     })
-    wx.switchTab({
-      url: '../type/type'
-    })
+    console.log(this.data.type[this.data.nav_select]);
   },
-  secondhand:function(){
-    wx:wx.navigateTo({
-      url: '../secondhand/secondhand',
-      success: function(res) {},
-      fail: function(res) {},
-      complete: function(res) {},
-    })
+  fabu: function () {
+    console.log('123')
   },
-  search:function(){
-    wx:wx.navigateTo({
-      url: 'search',
-      success: function(res) {},
-      fail: function(res) {},
-      complete: function(res) {},
-    })
-  },
-
   /**
    * 生命周期函数--监听页面加载
    */

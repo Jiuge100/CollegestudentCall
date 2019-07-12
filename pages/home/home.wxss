@@ -4,6 +4,22 @@ page {
   background-color: whitesmoke;
 }
 
+.swiper-container {
+  margin-top: 20rpx;
+  text-align: center;
+  align-items: center;
+}
+.swiper{
+  width: 100%;
+  height:220rpx;
+}
+.img{
+  width: 94%;
+  height: 100%;
+  border-radius: 15rpx;
+
+}
+
 .border {
   width: 130rpx;
   margin-left: 20rpx;
@@ -13,16 +29,7 @@ page {
   border-radius: 15rpx;
 }
 
-.swiper {
-  width: 100%;
-  height: 250rpx;
-}
 
-.img {
-  width: 100%;
-  height: 100%;
-  border-radius: 15rpx;
-}
 
 .one {
   font-size: 40rpx;

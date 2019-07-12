@@ -1,0 +1,63 @@
+/* pages/secondhand/secondhand.wxss */
+page{
+  background: #ededed
+}
+.one{
+  border-bottom: 1px solid 	#D3D3D3;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+.oneactive{
+  background: #fff;
+  border-left: 3px solid #87CEFA;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+} 
+.goods-list{
+  display:flex;
+  flex-wrap:wrap;
+  margin-top:30rpx;
+}
+
+.goods {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.good {
+  height: 160rpx;
+  width: 96%;
+  background: white;
+  display: flex;
+  border: 2px solid #c0c0c0;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin-top: 20rpx;
+}
+.img{
+  width:160rpx;
+  height:160rpx;
+}
+.round-click {
+  height: 120rpx;
+  width: 120rpx;
+  background-color: #00B2EE;
+  border-radius: 100%;
+  position: fixed;
+  bottom: 150rpx;
+  right: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9;
+  font-size: 33rpx;
+  color: #fff;
+}
+

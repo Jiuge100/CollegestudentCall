@@ -1,1 +1,4 @@
 /* pages/find/find.wxss */
+page{
+  background: linear-gradient(to bottom ,#87CEEB,#fff);
+}

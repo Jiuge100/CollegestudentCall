@@ -3,7 +3,7 @@
 <view wx:if="{{hasList}}">
   <view class="list" wx:for="{{carts}}">
     <view class="choose">
-      <icon wx:if="{{item.selected}}" type="success" color="red" data-num="{{index}}" bindtap="selected"></icon>
+      <icon wx:if="{{item.selected}}" type="success" color="#d95454" data-num="{{index}}" bindtap="selected"></icon>
       <icon wx:else  type="circle"  data-num="{{index}}" bindtap="selected"></icon>
     </view>
     <view class="imgages">
@@ -27,7 +27,7 @@
   <view class="footer">
     <view class="allchoice choose">
       <view style='display: flex;align-items:center;'>
-        <icon wx:if="{{selectAll == true}}" type="success" color="red" bindtap="selectedAll"></icon>
+        <icon wx:if="{{selectAll == true}}" type="success" color="#d95454" bindtap="selectedAll"></icon>
         <icon wx:else  type="circle" bindtap="selectedAll"></icon>
       </view>
       <view style='margin-left:10rpx;'>全选</view>

@@ -1,6 +1,8 @@
 {
   "pages": [
     "pages/home/home",
+    "pages/home/search",
+    "pages/secondhand/secondhand",
     "pages/type/type",
     "pages/find/find",
     "pages/shoppingcart/shoppingcart",

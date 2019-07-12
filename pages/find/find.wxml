@@ -1,11 +1,6 @@
 <!--pages/find/find.wxml-->
-<view  wx:for="{{goods}}" wx:key="">
-  <view style='width:100%;height:200rpx;background:red'>
-    <view style='float: left;width: 48%;height:100rpx;margin: 1.5% 1%;background: #fff;'>{{item.name}}</view>
-    <view style='float: left;width: 48%;height:100rpx;margin: 1.5% 1%;background: #fff;'>{{item.name}}</view>
-  </view>
-  <view style='width:100%;height:2rpx;background:green'></view>
-</view>
+
 <button bindtap='addcard2'>123</button>
 <button bindtap='addcard3'>123</button>
+
 

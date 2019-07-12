@@ -5,7 +5,7 @@ Page({
    */
   data: {
     nav_select: '0',
-    type: ['新鲜水果', '零食饮料', '电器数码', '衣裤鞋帽', '日用百货', '化妆品', '书籍文具', '其他', '化妆品', '书籍文具', '其他', '零食饮料', '电器数码'],
+    type: ['水果', '零食','饮料', '电器数码', '衣裤鞋帽', '日用百货', '化妆品', '书籍文具', '其他'],
     goods:[]
   },
 
@@ -13,27 +13,38 @@ Page({
     var that = this
     console.log(e);
     this.setData({
-      nav_select: e.currentTarget.dataset.nav_select1,
+      nav_select: e.currentTarget.dataset.nav_select,
     })
     console.log(this.data.type[this.data.nav_select]);
     wx.request({
-      url: getApp().globalData.url + 'allgoods',
+      url: getApp().globalData.url + 'goodbytype',
+      data:{
+        type: this.data.type[this.data.nav_select]
+      },
       header: {
         'content-type': 'application/json' // 默认值
       },
       success: function (res) {
+        console.log('res')
         console.log(res)
         that.setData({
-          goods: res.data
+          goods: res.data.data
         })
+        console.log('that.data.goods1')
         console.log(that.data.goods)
+        console.log('that.data.goods2')
       },
       fail: function () {
         console.log('失败')
       }
     })
-    
-
+    wx.setStorage({
+      key: 'type',
+      data: this.data.nav_select,
+    })
+  },
+  good:function(e){
+    console.log(this.data.goods[e.currentTarget.dataset.nav_good].goodid)
   },
 
   /**
@@ -43,32 +54,65 @@ Page({
     var that = this
     console.log(options);
     console.log(this.data.nav_select+'haha111111');
+
     wx.getStorage({
       key: 'type',
       success: function(res) {
+        console.log(res)
         that.setData({
           nav_select: res.data,
         })
-      },
-    })
-    console.log(this.data.nav_select+'haha2222');
+        console.log(that.data.nav_select + 'haha2222');
 
-    wx.request({
-      url: getApp().globalData.url + 'allgoods',
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      success: function (res) {
-        console.log(res)
-        that.setData({
-          goods: res.data
+        wx.request({
+          url: getApp().globalData.url + 'goodbytype',
+          data: {
+            type: that.data.type[that.data.nav_select]
+          },
+          header: {
+            'content-type': 'application/json' // 默认值
+          },
+          success: function (res) {
+            console.log('res'),
+            console.log(res)
+            that.setData({
+              goods: res.data.data
+            })
+            console.log('that.data.goods1')
+            console.log(that.data.goods)
+            console.log('that.data.goods2')
+          },
+          fail: function () {
+            console.log('失败')
+          }
         })
-        console.log(that.data.goods)
       },
       fail: function () {
-        console.log('失败')
+        wx.request({
+          url: getApp().globalData.url + 'goodbytype',
+          data: {
+            type: that.data.type[that.data.nav_select]
+          },
+          header: {
+            'content-type': 'application/json' // 默认值
+          },
+          success: function (res) {
+            console.log('res'),
+              console.log(res)
+            that.setData({
+              goods: res.data.data
+            })
+            console.log('that.data.goods1')
+            console.log(that.data.goods)
+            console.log('that.data.goods2')
+          },
+          fail: function () {
+            console.log('失败')
+          }
+        })
       }
     })
+
   },
 
   /**
